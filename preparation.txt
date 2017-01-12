@@ -1,0 +1,5 @@
+mysql -u root -p
+show databases;
+show tables from hi;
+use hi;
+select * from grades;
