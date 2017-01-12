@@ -8,7 +8,7 @@ insert into grades(class,name,grade) values
 ('1','Jame','98'),('1','Jimmy','74'),('1','Jay','43'),('2','Justin','43'),('2','Joe','89');
 
 #A2:select name from grades;
-#A3:select name from grades where name like Ja;
+#A3:select name from grades where name like ‘Ja’;
 #A4:select distinct class from grades;
 #A5:select class from grades where id>3;
 #A6:select * from grades where name='Jame';
@@ -20,9 +20,8 @@ insert into grades(class,name,grade) values
 #A11:insert into grades values(2,'Judy',77);
 #A12:insert into grades (name,grade) values ('Judy',80);
 
-求单个班级的平均分（sum length）
-select avg(grade) from sheet1 
-where class = 1
+
+select avg(grade) from grades where class=1;
 
 
 #A13:select class,sum(grade) from grades group by class;

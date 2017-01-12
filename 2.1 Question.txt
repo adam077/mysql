@@ -1,0 +1,77 @@
+## Question
+*Q1*:首先在左侧方框搭建下列列表环境（以id为主键）
+id class name     grade
+1  1     Jame     98
+2  1     Jimmy    74
+3  1     Jay      43
+4  2     Justin   43
+5  2     Joe      89
+
+
+
+1 . 筛选出所有name
+#Q3:筛选出名字有Ja的名字
+#Q4:仅看有哪些班级
+#Q5:把id大于3的名字筛选出来
+#Q6:筛选出Jame的信息
+#Q7:筛选出id大于2，成绩大于70的信息来
+#Q8:筛选出id大于2，成绩大于70的名字以及id小于2的名字来
+#Q9:按照成绩升序排列出名字和成绩
+#Q10:按照成绩升序，class降序排列出名字和成绩
+*Q11:*求一班的平均分
+
+#Q11:插入一行 2,judy,77
+#Q12:插入一行july 80
+#Q13:依班级计算总分
+#Q14:joe的班级改为3
+#Q15:joe的班级改为4，成绩改为90
+#Q16:删除班级为2的信息
+
+#Q17:加一列数学成绩列名：math
+#Q18:删掉grade那列
+#Q19:从grades里面筛选name一列到grades2
+#Q20:从grades里面筛选所有到grades2
+
+
+
+
+
+
+## 参考网站
+http://www.sqlfiddle.com/#!9/720bdc/6
+http://www.w3school.com.cn/sql/sql_quickref.asp
+
+
+## 备注
+	Like的运用场合主要在模糊查询的时候,一般以查询字符串居多,这里据一些例子来说他的一般用法:
+例1，查询name字段中包含有“明”字的。   
+
+select * from table1 where name like ‘%明%’  
+
+这里不要使用*来代替,一般在使用0个或者任意个字符构成的字符串的时候最好使用%
+
+不过在首或尾使用可以相互替换,如果在头尾同时使用的话,就必须要使用% 
+
+例2，查询name字段中以“李”字开头。   
+
+select * from table1 where name like ‘李*’  
+
+或者
+
+select * from table1 where name like ‘李%’ 
+查询name字段中以“李”字开头。  
+select * from table1 where name like ‘*李’ 
+
+例3，查询name字段中含有数字的。   
+
+select * from table1 where name like ‘%[0-9]%’   
+
+例4，查询name字段中含有小写字母的。   
+
+select * from table1 where name like ‘%[a-z]%’   
+
+例5，查询name字段中不含有数字的。   
+
+select * from table1 where name like ‘%[!0-9]%’
+
+补充一点,?或者_表示单个字符
